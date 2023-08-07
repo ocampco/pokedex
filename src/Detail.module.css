@@ -9,7 +9,6 @@
 .imageBackground {
   box-shadow: inset -0.5rem -0.25rem #ded0a1;
   background-color: #6bb8ca;
-  max-width: 240px;
   margin: 0 auto;
   text-align: center;
 }
