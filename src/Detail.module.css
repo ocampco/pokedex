@@ -1,0 +1,27 @@
+.imageBorder {
+  background-color: #eee2bc;
+  border-radius: 1rem;
+  padding: 2rem 2.5rem;
+  box-shadow: inset 0.75rem 0.5rem #ded0a1;
+  margin-bottom: 1.5rem;;
+}
+
+.imageBackground {
+  box-shadow: inset -0.5rem -0.25rem #ded0a1;
+  background-color: #6bb8ca;
+  max-width: 240px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.image {
+  height: 10rem;
+}
+
+.attributes {
+  background-color: #247b36;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: inset -0.5rem -0.25rem #426e36;
+}

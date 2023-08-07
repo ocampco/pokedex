@@ -1,14 +1,18 @@
 import React from 'react';
-import List from './List';
 import Detail from './Detail';
-import './App.css';
+import List from './List';
+import styles from './App.module.css';
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>Pokedex</h1>
-      <List />
-      <Detail />
+    <div className={styles.container}>
+      <div className={styles.content}>
+        <h1 className={styles.title}>Pokedex</h1>
+        <div className={styles.information}>
+          <Detail />
+          <List />
+        </div>
+      </div>
     </div>
   );
 };
