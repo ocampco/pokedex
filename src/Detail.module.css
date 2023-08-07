@@ -19,6 +19,7 @@
 .placeholder {
   height: 3.75rem;
   margin: 3rem;
+  fill: var(--beige-main);
 }
 
 .attributes {
