@@ -16,6 +16,11 @@
   height: 10rem;
 }
 
+.placeholder {
+  height: 3.75rem;
+  margin: 3rem;
+}
+
 .attributes {
   background-color: var(--green-main);
   border-radius: 1rem;

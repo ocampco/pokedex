@@ -1,24 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { ReactComponent as Placeholder } from './placeholder.svg';
 import { transformDetail } from './transformResponse';
 import { DETAIL_URL } from './config';
 import styles from './Detail.module.css';
 
-const Image = ({
-  image,
-  name,
-}) =>
+const Image = ({ children }) =>
   <div className={styles.imageBorder}>
     <div className={styles.imageBackground}>
-      <img src={image} alt={name} className={styles.image} />
+      {children}
     </div>
   </div>;
 
 const Atrributes = ({
-    name,
-    height,
-    weight,
-    types,
+  name = 'loading...',
+  height = '?',
+  weight = '?',
+  types = '?',
 }) =>
   <>
     <div className={styles.attributes}>
@@ -47,20 +45,27 @@ const Detail = () => {
     fetchDetail();
   }, [name]);
 
-  if (isLoading) return <p>Loading...</p>;
-
   return (
     <>
-      <Image
-        image={detail.image}
-        name={detail.name}
-      />
-      <Atrributes
-        name={detail.name}
-        height={detail.height}
-        weight={detail.weight}
-        types={detail.types}
-      />
+      <Image>
+        { isLoading
+            ? <Placeholder className={styles.placeholder} />
+            : <img
+                className={styles.image}
+                src={detail.image}
+                alt={name}
+              />
+        }
+      </Image>
+      { isLoading
+        ? <Atrributes />
+        : <Atrributes
+            name={name}
+            height={detail.height}
+            weight={detail.weight}
+            types={detail.types}
+          />
+      }
     </>
   )
 };
