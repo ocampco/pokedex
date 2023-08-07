@@ -28,6 +28,7 @@ const List = () => {
   return (
     <div className={styles.container}>
       { !isLoading && <Navigate to={`/${selected}`} replace={true} /> }
+      <label>select pokemon: </label>
       <select
         className={styles.list}
         onChange={(e) => setSelected(e.target.value)}

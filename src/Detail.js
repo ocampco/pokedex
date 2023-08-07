@@ -24,14 +24,10 @@ const Stats = ({
   <>
     <Image image={image} name={name} />
     <div className={styles.attributes}>
-      <h2>{name}</h2>
-      <p>Height: {height}</p>
-      <p>Weight: {weight}</p>
-      <div>Type(s):
-        { types.map(
-          (type) => <p key={type}>{type}</p>)
-        }
-      </div>
+      <h2 className={styles.name}>{name}</h2>
+      <p>height: {height}</p>
+      <p>weight: {weight}</p>
+      <div>type(s): { types.join(", ")}</div>
     </div>
   </>
 );

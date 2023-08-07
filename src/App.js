@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Pokedex</h1>
+        <h1 className={styles.title}>pokedex</h1>
         <div className={styles.information}>
           <Detail />
           <List />
