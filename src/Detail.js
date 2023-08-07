@@ -49,7 +49,6 @@ const Detail = () => {
 
       setDetail(results);
       setIsLoading(false);
-      console.log('results=', results);
     };
 
     fetchDetail();

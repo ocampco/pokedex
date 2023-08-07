@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { transformList } from './transformResponse';
 import { LIST_URL } from './config';
 import styles from './List.module.css';
@@ -7,6 +7,7 @@ import styles from './List.module.css';
 const List = () => {
   const [list, setList] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [selected, setSelected] = useState('bulbasaur');
 
   useEffect(() => {
     const fetchList = async () => {
@@ -23,15 +24,18 @@ const List = () => {
 
   if (isLoading) return <div>Loading...</div>
 
+  // TODO: Route better
   return (
     <div className={styles.container}>
-      <select className={styles.list}>
+      { !isLoading && <Navigate to={`/${selected}`} replace={true} /> }
+      <select
+        className={styles.list}
+        onChange={(e) => setSelected(e.target.value)}
+      >
         { list.map(({ name, url, id }) => (
           <option key={id} className={styles.item} value={name}>
-              <Link to={`/${name}`}>
-                  {id} - {name}
-                </Link>
-            </option>
+            {id} - {name}
+          </option>
         ))}
       </select>
     </div>
