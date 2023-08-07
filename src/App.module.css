@@ -1,28 +1,21 @@
-/* TODO: Extract colors for reuse */
 .container {
-  background-color: #71ca9f;
-  height: 100%;
+  background-color: var(--app-bg);
   padding: 0.5rem;
 }
 
 .content {
-  background-color: #d42d28;
+  background-color: var(--red-main);
   max-width: 18rem;
   margin: 0 auto;
   padding: 3rem 2rem 4rem 4rem;
   border-radius: 1.5rem;
-  box-shadow: inset 2rem 1rem #ac0002;
+  box-shadow: inset 2rem 1rem var(--red-shadow);
 }
 
 .title {
   font-size: 3rem;
-  color: #eee2bc;
+  color: var(--beige-main);
   font-weight: 600;
   margin-bottom: 1rem;
   letter-spacing: 0.25rem;
-}
-
-.information {
-  display: flex;
-  flex-direction: column;
 }

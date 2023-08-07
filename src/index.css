@@ -1,6 +1,17 @@
 @import './reset.css';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400;1,500&family=VT323&display=swap');
 
+:root {
+  --app-bg: #71ca9f;
+  --red-main: #d42d28;
+  --red-shadow: #ac0002;
+  --beige-main: #eee2bc;
+  --beige-shadow: #ded0a1;
+  --green-main: #247b36;
+  --green-shadow: #426e36;
+  --blue-main: #6fa6c4;
+  --blue-shadow: #666a85;
+}
 
 a {
   text-decoration: none;

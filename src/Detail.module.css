@@ -1,14 +1,14 @@
 .imageBorder {
-  background-color: #eee2bc;
+  background-color: var(--beige-main);
   border-radius: 1rem;
   padding: 2rem 2.5rem;
-  box-shadow: inset 0.75rem 0.5rem #ded0a1;
+  box-shadow: inset 0.75rem 0.5rem var(--beige-shadow);
   margin-bottom: 1.5rem;;
 }
 
 .imageBackground {
-  box-shadow: inset -0.5rem -0.25rem #ded0a1;
-  background-color: #6bb8ca;
+  box-shadow: inset -0.5rem -0.25rem var(--beige-shadow);
+  background-color: var(--blue-main);
   margin: 0 auto;
   text-align: center;
 }
@@ -18,15 +18,15 @@
 }
 
 .attributes {
-  background-color: #247b36;
+  background-color: var(--green-main);
   border-radius: 1rem;
   padding: 1rem;
   margin-bottom: 1.5rem;
-  box-shadow: inset -0.5rem -0.25rem #426e36;
+  box-shadow: inset -0.5rem -0.25rem var(--green-shadow);
 }
 
 .name {
-  color: #247b36;
+  color: var(--green-main);
   background-color: black;
   font-weight: 600;
   width: fit-content;
