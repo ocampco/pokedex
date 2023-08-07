@@ -1,6 +1,6 @@
 import React from 'react';
 import Detail from './Detail';
-import List from './List';
+import Select from './Select';
 import styles from './App.module.css';
 
 const App = () => {
@@ -10,8 +10,8 @@ const App = () => {
         <h1 className={styles.title}>
           pokedex
         </h1>
+          <Select />
           <Detail />
-          <List />
       </div>
     </div>
   );
