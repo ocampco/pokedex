@@ -15,6 +15,8 @@ export const transformDetail = ({
   name,
   height: `${height / 10} m`,
   weight: `${weight / 10} kg`,
-  types: types.map(item => item.type.name),
+  types: types
+    .map(item => item.type.name)
+    .join(", "),
   image: sprites['front_default'],
 });
