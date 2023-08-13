@@ -4,6 +4,14 @@ import { transformList } from './transformResponse';
 import { LIST_URL } from './config';
 import styles from './Select.module.css';
 
+const Option = ({ name, id }) =>
+  <option
+    className={styles.item}
+    value={name}
+  >
+    {id} - {name}
+  </option>;
+
 const Select = () => {
   const [list, setList] = useState();
   const [isLoading, setIsLoading] = useState(true);
@@ -34,9 +42,7 @@ const Select = () => {
         onChange={(e) => setSelected(e.target.value)}
       >
         { list.map(({ name, id }) => (
-          <option key={id} className={styles.item} value={name}>
-            {id} - {name}
-          </option>
+            <Option key={id} name={name} id={id} />
         ))}
       </select>
     </div>
