@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import { ReactComponent as Placeholder } from './placeholder.svg';
 import { transformDetail } from './transformResponse';
 import { DETAIL_URL } from './config';
@@ -27,10 +26,9 @@ const Atrributes = ({
     </div>
   </>;
 
-const Detail = () => {
+const Detail = ({ name }) => {
   const [detail, setDetail] = useState();
   const [isLoading, setIsLoading] = useState(true);
-  const { name } = useParams();
 
   useEffect(() => {
     const fetchDetail = async () => {
@@ -42,19 +40,19 @@ const Detail = () => {
       setIsLoading(false);
     };
 
-    fetchDetail();
+    if (name) fetchDetail();
   }, [name]);
 
   return (
     <>
       <Image>
         { isLoading
-            ? <Placeholder className={styles.placeholder} />
-            : <img
-                className={styles.image}
-                src={detail.image}
-                alt={name}
-              />
+          ? <Placeholder className={styles.placeholder} />
+          : <img
+              className={styles.image}
+              src={detail.image}
+              alt={name}
+            />
         }
       </Image>
       { isLoading
