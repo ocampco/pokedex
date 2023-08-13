@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import Detail from './Detail';
-import SelectContainer from './SelectContainer';
+import Detail from './components/Detail';
+import SelectContainer from './components/SelectContainer';
 import styles from './App.module.css';
 
 const App = () => {

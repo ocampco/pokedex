@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { ReactComponent as Placeholder } from './placeholder.svg';
-import { transformDetail } from './transformResponse';
-import { DETAIL_URL } from './config';
+import { ReactComponent as Placeholder } from './../placeholder.svg';
+import { transformDetail } from './../transformResponse';
+import { DETAIL_URL } from './../config';
 import styles from './Detail.module.css';
 
 const Image = ({ children }) =>
