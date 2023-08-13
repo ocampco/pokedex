@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import Select, { SelectPlaceholder } from './Select';
 import { transformList } from './../transformResponse';
-import { LIST_URL } from './../config';
+import { LIST_URL } from './../constants/config';
 import styles from './SelectContainer.module.css';
 
 const SelectContainer = ({ name }) => {
