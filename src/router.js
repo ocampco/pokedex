@@ -8,6 +8,10 @@ const routes = [
   },
 ];
 
-const router = createBrowserRouter(routes);
+const options = {
+  basename: '/pokedex',
+};
+
+const router = createBrowserRouter(routes, options);
 
 export default router;
