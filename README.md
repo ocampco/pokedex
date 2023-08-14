@@ -6,9 +6,11 @@
 
 ```bash
 # Install dependencies
+$ nvm use
 $ npm install
 
 # Run
-$ npm start
+# Served at http://localhost:3000/pokedex
+$ npm run start
 ```
 
