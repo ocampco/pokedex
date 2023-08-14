@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { ReactComponent as Placeholder } from './../placeholder.svg';
 import { transformDetail } from './../transformResponse';
 import { DETAIL_URL } from './../constants/config';
 import styles from './Detail.module.css';
+
+const PLACEHOLDER_IMG_SRC = `${process.env.PUBLIC_URL}/pokeball.png`;
 
 const Image = ({ children }) =>
   <div className={styles.imageBorder}>
@@ -12,7 +13,7 @@ const Image = ({ children }) =>
   </div>;
 
 const Atrributes = ({
-  name = 'loading...',
+  name = 'no pokemon selected',
   height = '?',
   weight = '?',
   types = '?',
@@ -46,14 +47,11 @@ const Detail = ({ name }) => {
   return (
     <>
       <Image>
-        { isLoading
-          ? <Placeholder className={styles.placeholder} />
-          : <img
-              className={styles.image}
-              src={detail.image}
-              alt={name}
-            />
-        }
+        <img
+          className={styles.image}
+          src={isLoading ? PLACEHOLDER_IMG_SRC : detail.image}
+          alt={isLoading ? 'pokeball' : name}
+        />
       </Image>
       { isLoading
         ? <Atrributes />
